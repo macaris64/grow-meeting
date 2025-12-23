@@ -1,0 +1,6 @@
+numpy
+soundfile
+scipy
+faster-whisper
+openai
+python-dotenv

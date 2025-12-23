@@ -1,0 +1,89 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+
+# =========================
+# Virtual Environment
+# =========================
+venv/
+.venv/
+env/
+ENV/
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Output / Generated files
+# =========================
+output/
+*.log
+*.jsonl
+*.tmp
+
+# =========================
+# Audio / Media artifacts
+# =========================
+*.wav
+*.mp3
+*.flac
+*.ogg
+
+# (Eğer test audio'ları repo'da tutacaksan,
+# spesifik bir klasörü hariç tutabilirsin)
+# !audio/samples/*.wav
+
+# =========================
+# Databases
+# =========================
+*.sqlite
+*.sqlite3
+*.db
+
+# =========================
+# Caches / Model artifacts
+# =========================
+.cache/
+.cache-whisper/
+.whisper/
+.huggingface/
+transformers_cache/
+
+# =========================
+# Jupyter / Experiments
+# =========================
+.ipynb_checkpoints/
+*.ipynb
+
+# =========================
+# IDEs / Editors
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# =========================
+# OS-specific
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Build / Distribution
+# =========================
+build/
+dist/
+*.egg
