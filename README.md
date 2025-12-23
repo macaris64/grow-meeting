@@ -76,14 +76,16 @@ RAW Transcript  ──────────────▶ Output (immediate)
 ```text
 .
 ├── main.py                  # Application entrypoint
-├── fake_blackhole.py        # WAV-based audio stream simulator
-├── audio_buffer_manager.py  # Sliding window audio buffer
-├── silence_detector.py      # Silence detection logic
-├── stt_engine.py            # Speech-to-text (Whisper)
-├── sentence_builder.py      # Sentence segmentation & cleanup
-├── llm_client.py            # Async LLM client
-├── llm_commit_queue.py      # Order-guaranteed async commit
-├── output_manager.py        # Pluggable output abstraction
+├── app/
+│   ├── fake_blackhole.py        # WAV-based audio stream simulator
+│   ├── audio_buffer_manager.py  # Sliding window audio buffer
+│   ├── silence_detector.py      # Silence detection logic
+│   ├── stt_engine.py            # Speech-to-text (Whisper)
+│   ├── sentence_builder.py      # Sentence segmentation & cleanup
+│   ├── llm_client.py            # Async LLM client
+│   ├── llm_commit_queue.py      # Order-guaranteed async commit
+│   └── output_manager.py        # Pluggable output abstraction
+├── tests/                  # Example scripts/tests
 ├── output/                 # Generated transcripts (ignored by git)
 ├── audio/                  # Test audio (optional)
 ├── requirements.txt

@@ -1,6 +1,6 @@
-from fake_blackhole import FakeBlackHole
-from audio_buffer_manager import AudioBufferManager
-from stt_engine import STTEngine
+from app.fake_blackhole import FakeBlackHole
+from app.audio_buffer_manager import AudioBufferManager
+from app.silence_detector import SilenceDetector
 
 
 def main():
@@ -18,26 +18,20 @@ def main():
         step_size_sec=1.0,
     )
 
-    stt = STTEngine(
-        model_size="small",
-        device="cpu",
-        compute_type="int8",
-        language="en",
+    silence_detector = SilenceDetector(
+        sample_rate=16000,
+        silence_threshold=0.01,
+        silence_duration_ms=500,
     )
 
-    window_index = 0
-
     def on_audio_chunk(chunk):
-        nonlocal window_index
-
         windows = buffer_manager.add_chunk(chunk)
         for w in windows:
-            window_index += 1
-            texts = stt.transcribe(w)
-
-            print(f"\n[STT] Window #{window_index}")
-            for t in texts:
-                print(f"  → {t}")
+            result = silence_detector.detect(w)
+            print(
+                f"Window | silent={result['is_silent']} "
+                f"| rms={result['rms']:.5f}"
+            )
 
     bh.stream(on_audio_chunk)
 
