@@ -1,8 +1,8 @@
-from fake_blackhole import FakeBlackHole
-from audio_buffer_manager import AudioBufferManager
-from silence_detector import SilenceDetector
-from stt_engine import STTEngine
-from sentence_builder import SentenceBuilder
+from app.fake_blackhole import FakeBlackHole
+from app.audio_buffer_manager import AudioBufferManager
+from app.silence_detector import SilenceDetector
+from app.stt_engine import STTEngine
+from app.sentence_builder import SentenceBuilder
 
 
 def main():

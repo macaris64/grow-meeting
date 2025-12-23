@@ -1,13 +1,13 @@
 import asyncio
 
-from fake_blackhole import FakeBlackHole
-from audio_buffer_manager import AudioBufferManager
-from silence_detector import SilenceDetector
-from stt_engine import STTEngine
-from sentence_builder import SentenceBuilder
-from llm_client import LLMClient
-from llm_commit_queue import OrderedCommitQueue
-from output_manager import OutputManager
+from app.fake_blackhole import FakeBlackHole
+from app.audio_buffer_manager import AudioBufferManager
+from app.silence_detector import SilenceDetector
+from app.stt_engine import STTEngine
+from app.sentence_builder import SentenceBuilder
+from app.llm_client import LLMClient
+from app.llm_commit_queue import OrderedCommitQueue
+from app.output_manager import OutputManager
 
 
 async def main():

@@ -1,5 +1,5 @@
-from fake_blackhole import FakeBlackHole
-from audio_buffer_manager import AudioBufferManager
+from app.fake_blackhole import FakeBlackHole
+from app.audio_buffer_manager import AudioBufferManager
 
 
 def main():
