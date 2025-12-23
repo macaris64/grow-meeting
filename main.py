@@ -109,11 +109,9 @@ async def main():
             if final_sentence:
                 sentence_id += 1
 
-                # 1️⃣ RAW hemen göster
                 print(f"\n🎯 RAW #{sentence_id} → {final_sentence}")
                 output.write_raw(sentence_id, final_sentence)
 
-                # 2️⃣ LLM async fire-and-forget (AMA TRACK EDİLİYOR)
                 task = asyncio.create_task(
                     process_llm(sentence_id, final_sentence)
                 )
